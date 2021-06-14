@@ -1,0 +1,5 @@
+ * write the parser as a top-down recursive descent parser
+   * define grammar in the comments
+   * write simple lexer
+   * write recursive descent parser
+   * xml_node struct uses cutlery containers and write api of parser and serializer similar to jsonparser project

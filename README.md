@@ -1,13 +1,15 @@
-# c_template_application
-A template for all of my c projects.
+# JSONparser
+A C library to build parse tree for XML grammar.
 
 ## Setup instructions
+**Install dependencies :**
+ * [Cutlery](https://github.com/RohanVDvivedi/Cutlery)
 
 **Download source code :**
- * `git clone https://github.com/RohanVDvivedi/c_template_application.git`
+ * `git clone https://github.com/RohanVDvivedi/XMLparser.git`
 
 **Build from source :**
- * `cd c_template_application`
+ * `cd XMLparser`
  * `make clean all`
 
 **Install from the build :**
@@ -15,13 +17,13 @@ A template for all of my c projects.
  * ***Once you have installed from source, you may discard the build by*** `make clean`
 
 ## Using The library
- * add `-lcapp` linker flag, while compiling your application
+ * add `-lxmlparser -lcutlery` linker flag, while compiling your application
  * do not forget to include appropriate public api headers as and when needed. this includes
-   * `#include<capp.h>`
-   * `#include<print_temp.h>`
+   * `#include<xml_parser.h>`
+   * `#include<xml_serializer.h>`
 
 ## Instructions for uninstalling library
 
 **Uninstall :**
- * `cd c_template_application`
+ * `cd XMLparser`
  * `sudo make uninstall`
