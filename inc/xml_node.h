@@ -3,7 +3,7 @@
 
 #include<dstring.h>
 #include<hashmap.h>
-#include<array.h>
+#include<linkedlist.h>
 
 typedef struct xml_node xml_node;
 struct xml_node
@@ -25,6 +25,11 @@ struct xml_node
 
 		dstring content;		// string content
 	}data;
+
+
+	// embedded node for child_nodes linkedlist
+	// none of the concern for this library
+	llnode sibling_embedded_linkedlist_node;
 };
 
 #endif
