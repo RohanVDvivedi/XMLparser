@@ -10,8 +10,8 @@ struct xml_node
 {
 	dstring tag_name;		// i.e. <tag_name> ... </tag_name> OR <tag_name/>
 
-	hashmap attributes;		// hashmap of dstring vs dstring
-							// i.e. <tag_name attribute_key="attribute_value" >
+	hashmap attributes;		// hashmap of struct attribute i.e. dstring vs dstring
+							// i.e. <tag_name attribute_key="attribute_value">
 
 	int is_empty : 1;		// an XML tag is empty if
 							// <tag_name></tag_name> OR <tag_name/>
@@ -21,15 +21,21 @@ struct xml_node
 	// an XML tag contains children_nodes or content
 	union
 	{
-		linkedlist child_nodes;	// a dynamic array of xml_node*
+		struct
+		{
+			unsigned int children_count;
+			array child_nodes;	// a dynamic array of xml_node*
+		};
 
 		dstring content;		// string content
-	}data;
+	};
+};
 
-
-	// embedded node for child_nodes linkedlist
-	// none of the concern for this library
-	llnode sibling_embedded_linkedlist_node;
+typedef struct attribute attribute;
+struct attribute
+{
+	dstring key;
+	dstring value;
 };
 
 #endif
