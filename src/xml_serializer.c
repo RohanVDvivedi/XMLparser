@@ -26,9 +26,7 @@ void serialize_xml(dstring* result, const xml_node* node_p)
 	if(node_p->has_content)
 		snprintf_dstring(result, "%.*s", node_p->content.bytes_occupied, node_p->content.cstring);
 	else
-	{
 		for_each_in_array(&(node_p->child_nodes), (void (*)(void*, unsigned int, const void*))serialize_xml_children_wrapper, result);
-	}
 
 	snprintf_dstring(result, "</%.*s>", node_p->tag_name.bytes_occupied, node_p->tag_name.cstring);
 }
