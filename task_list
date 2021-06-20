@@ -1,4 +1,3 @@
- * write serializer for this xml_node
  * define xml_token
  * write the parser as a top-down recursive descent parser
    * define grammar in the comments
