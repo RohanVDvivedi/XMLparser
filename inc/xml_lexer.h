@@ -1,6 +1,8 @@
 #ifndef XML_LEXER_H
 #define XML_LEXER_H
 
+#include<dstring.h>
+
 typedef enum xml_lexeme_type xml_lexeme_type;
 enum xml_lexeme_type
 {
