@@ -1,6 +1,6 @@
- * define xml_token
+ * implement lexer
+   * complete all lexeme cases
+   * escape comments in the lexer
  * write the parser as a top-down recursive descent parser
    * define grammar in the comments
-   * write simple lexer
    * write recursive descent parser
-   * xml_node struct uses cutlery containers and write api of parser and serializer similar to jsonparser project
