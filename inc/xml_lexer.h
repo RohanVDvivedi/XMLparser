@@ -6,6 +6,7 @@
 typedef enum xml_lexeme_type xml_lexeme_type;
 enum xml_lexeme_type
 {
+	WHITESPACES_STRING,					// \r\n\t_ etc
 	OPEN_ANGULAR_BRACKET,				// <
 	CLOSE_ANGULAR_BRACKET,				// >
 	OPEN_ANGULAR_BRACKET_FORWARD_SLASH,	// </
