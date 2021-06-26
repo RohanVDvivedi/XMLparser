@@ -3,6 +3,18 @@
 
 #include<xml_lexer.h>
 
+char* xml_lexemes_string[] = {
+	"[whitespaces]",
+	"[<]",
+	"[>]",
+	"[</]",
+	"[/>]",
+	"[=]",
+	"[\"string\"]",
+	"[string]",
+	"EOF"
+};
+
 int main()
 {
 	printf("xml string building start\n\n");

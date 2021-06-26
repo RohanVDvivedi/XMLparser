@@ -1,18 +1,20 @@
 #include<xml_lexer.h>
 
+#include<ctype.h>
+
 void init_xml_lexer(xml_lexer* xml_lexer_p, dstring* xml_string)
 {
 	xml_lexer_p->next_token_start = xml_string->cstring;
 	xml_lexer_p->xml_string = xml_string;
 }
 
-int get_next_xml_lexeme(xml_lexer* xml_lexer_p, xml_lexeme* lexeme_p)
+int get_next_xml_lexeme(xml_lexer* xml_lexer_p, xml_lexeme* xml_lexeme_p)
 {
 	char* end_char_at = xml_lexer_p->xml_string->cstring + xml_lexer_p->xml_string->bytes_occupied;
 
 	if(xml_lexer_p->next_token_start == NULL || xml_lexer_p->next_token_start == end_char_at)
 	{
-		xml_lexeme_p->type = END_OF_xml_STRING;
+		xml_lexeme_p->type = END_OF_XML_STRING;
 		xml_lexeme_p->value = ((dstring){});
 		return 1;
 	}
