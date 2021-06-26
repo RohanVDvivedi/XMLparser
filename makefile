@@ -7,7 +7,7 @@ DOWNLOAD_DIR:=/usr/local
 # we may download all the public headers
 
 # list of public api headers (only these headers will be installed)
-PUBLIC_HEADERS:=xml_parser.h xml_serializer.h xml_node.h xml_data_type.h
+PUBLIC_HEADERS:=xml_parser.h xml_lexer.h xml_serializer.h xml_node.h
 # the library, which we will create
 LIBRARY:=lib${PROJECT_NAME}.a
 # the binary, which will use the created library
