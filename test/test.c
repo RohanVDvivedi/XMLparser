@@ -45,10 +45,10 @@ int main()
 	do
 	{
 		success = get_next_xml_lexeme(&jslx, &jslxm);
-		printf("<");
+		printf("[");
 		if(jslxm.type != END_OF_XML_STRING)
 			printf_dstring(&(jslxm.value));
-		printf("> \n \t\t\t\t %s\n", xml_lexemes_string[jslxm.type]);
+		printf("] \n \t\t\t\t %s\n", xml_lexemes_string[jslxm.type]);
 	}
 	while(success && jslxm.type != END_OF_XML_STRING);
 	return 0;
