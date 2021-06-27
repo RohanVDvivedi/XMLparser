@@ -21,11 +21,11 @@ int main()
 
 	dstring const * const xml_str = dstring_DUMMY_CSTRING(" \
 		<root>\
-			<name give=\"firstname,lastname\" preserve_order=\"true\">\
+			<name give=\'firstname,lastname\' preserve_order=\"true\">\
 				<firstname> Rohan </firstname>\
 				<lastname> Dvivedi </lastname>\
 			</name>\
-			<age input=\"integer\">\
+			<age input=\'integer\'>\
 				25\
 			</age>\
 			<score mandatory=\"no\" can_be_empty=\"yup\" />\
