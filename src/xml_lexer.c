@@ -1,5 +1,6 @@
 #include<xml_lexer.h>
 
+#include<stdio.h>
 #include<ctype.h>
 
 void init_xml_lexer(xml_lexer* xml_lexer_p, dstring* xml_string)
