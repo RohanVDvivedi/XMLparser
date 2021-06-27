@@ -64,7 +64,6 @@ int get_next_xml_lexeme(xml_lexer* xml_lexer_p, xml_lexeme* xml_lexeme_p)
 				return 1;
 			else
 				return 0;
-			return 1;
 		}
 		case '>' :	// case for >
 		{
