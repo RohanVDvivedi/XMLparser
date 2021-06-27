@@ -98,7 +98,7 @@ int get_next_xml_lexeme(xml_lexer* xml_lexer_p, xml_lexeme* xml_lexeme_p)
 				xml_lexeme_p->value.cstring = xml_lexer_p->next_token_start++;
 				xml_lexeme_p->value.bytes_occupied = 1;
 				while((xml_lexer_p->next_token_start != end_char_at) && !isspace(*(xml_lexer_p->next_token_start))
-					&& (*(xml_lexer_p->next_token_start)) != '<' && (*(xml_lexer_p->next_token_start)) != '>')
+					&& (*(xml_lexer_p->next_token_start)) != '<' && (*(xml_lexer_p->next_token_start)) != '>' && (*(xml_lexer_p->next_token_start)) != '=')
 					xml_lexer_p->next_token_start++;
 				xml_lexeme_p->value.bytes_occupied = xml_lexer_p->next_token_start - xml_lexeme_p->value.cstring;
 				return 1;
