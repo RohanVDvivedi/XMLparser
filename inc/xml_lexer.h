@@ -12,7 +12,7 @@ enum xml_lexeme_type
 	OPEN_ANGULAR_BRACKET_FORWARD_SLASH,	// </
 	FORWARD_SLASH_CLOSE_SQUARE_BRACKET,	// />
 	EQUALS,								// =
-	QUOTED_STRING,						// "string"
+	QUOTED_STRING,						// "string" or 'string'
 	UNQUOTED_STRING,					// string
 	END_OF_XML_STRING
 };
