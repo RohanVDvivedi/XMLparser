@@ -22,11 +22,12 @@ int get_next_xml_lexeme(xml_lexer* xml_lexer_p, xml_lexeme* xml_lexeme_p)
 
 	switch(*(xml_lexer_p->next_token_start))
 	{
-		case '\"':
+		case '\'' :
+		case '\"' :
 		{
 			xml_lexeme_p->type = QUOTED_STRING;
 			xml_lexeme_p->value.cstring = xml_lexer_p->next_token_start++;
-			while((xml_lexer_p->next_token_start != end_char_at) && (*(xml_lexer_p->next_token_start++)) != '\"');
+			while((xml_lexer_p->next_token_start != end_char_at) && (*(xml_lexer_p->next_token_start++)) != (*(xml_lexeme_p->value.cstring)));
 			if(xml_lexer_p->next_token_start == end_char_at)
 				return 0; //error
 			xml_lexeme_p->value.bytes_occupied = xml_lexer_p->next_token_start - xml_lexeme_p->value.cstring;
