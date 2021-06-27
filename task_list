@@ -1,6 +1,4 @@
- * implement lexer
-   * complete all lexeme cases
-   * escape comments in the lexer
+ * escape comments in the lexer
  * write the parser as a top-down recursive descent parser
    * define grammar in the comments
    * write recursive descent parser
