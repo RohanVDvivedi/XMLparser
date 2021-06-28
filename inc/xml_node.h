@@ -43,14 +43,16 @@ xml_node* get_new_empty_xml_node();
 int add_xml_attribute_to_xml_node(xml_node* xml_node_p, const dstring* key, const dstring* value);
 dstring* get_xml_attribute_from_xml_node(const xml_node* xml_node_p, const dstring* key);
 int exists_xml_attribute_from_xml_node(const xml_node* xml_node_p, const dstring* key);
-int delete_xml_attribute_from_xml_node(xml_node* xml_node_p, const dstring* key);
+int remove_xml_attribute_from_xml_node(xml_node* xml_node_p, const dstring* key);
+int remove_all_xml_attributes_from_xml_node(xml_node* xml_node_p);
 
 int append_content_xml_node(xml_node* xml_node_p, const dstring* content_to_append);
 int clear_content_xml_node(xml_node* xml_node_p);
 
 int append_child_xml_node(xml_node* xml_node_p, xml_node* child_xml_p);
 xml_node* get_child_xml_node(const xml_node* xml_node_p, unsigned int index);
-int delete_child_xml_node(xml_node* xml_node_p, unsigned int index);
+int remove_child_xml_node(xml_node* xml_node_p, unsigned int index);
+int remove_all_children_xml_node(xml_node* xml_node_p);
 
 int make_empty_xml_node(xml_node* xml_node_p);
 
