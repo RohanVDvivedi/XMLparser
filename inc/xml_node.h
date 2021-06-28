@@ -38,4 +38,15 @@ struct attribute
 	dstring value;
 };
 
+xml_node* get_new_empty_xml_node();
+
+int append_content_xml_node(xml_node* xml_node_p, const dstring* content_to_append);
+int clear_content_xml_node(xml_node* xml_node_p);
+
+int append_child_xml_node(xml_node* xml_node_p, xml_node* child_xml_p);
+xml_node* get_child_xml_node(xml_node* xml_node_p, unsigned int index);
+int delete_child_xml_node(xml_node* xml_node_p, unsigned int index);
+
+void delete_xml_node_tree(xml_node* xml_node_p);
+
 #endif
