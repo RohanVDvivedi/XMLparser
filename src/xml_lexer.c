@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include<ctype.h>
 
-void init_xml_lexer(xml_lexer* xml_lexer_p, dstring* xml_string)
+void init_xml_lexer(xml_lexer* xml_lexer_p, const dstring* xml_string)
 {
 	xml_lexer_p->next_token_start = xml_string->cstring;
 	xml_lexer_p->xml_string = xml_string;

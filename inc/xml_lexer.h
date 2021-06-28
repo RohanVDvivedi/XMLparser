@@ -31,10 +31,10 @@ struct xml_lexer
 {
 	char* next_token_start;
 
-	dstring* xml_string;
+	const dstring* xml_string;
 };
 
-void init_xml_lexer(xml_lexer* xml_lexer_p, dstring* xml_string);
+void init_xml_lexer(xml_lexer* xml_lexer_p, const dstring* xml_string);
 
 // after this function call the lex points to the next lexeme after its previous value
 // returns 1 for success, a return value of 0 represents lexical error
