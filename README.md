@@ -1,4 +1,4 @@
-# JSONparser
+# XMLparser
 A C library to build parse tree for XML grammar.
 
 ## Setup instructions
